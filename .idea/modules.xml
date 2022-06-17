@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/clase-28-clinica-odontologica-mesas.iml" filepath="$PROJECT_DIR$/.idea/clase-28-clinica-odontologica-mesas.iml" />
       <module fileurl="file://$PROJECT_DIR$/clinica-odontologica/clinica-odontologica.iml" filepath="$PROJECT_DIR$/clinica-odontologica/clinica-odontologica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/clinica-odontologica-base-repo.iml" filepath="$PROJECT_DIR$/.idea/clinica-odontologica-base-repo.iml" />
     </modules>
   </component>
 </project>

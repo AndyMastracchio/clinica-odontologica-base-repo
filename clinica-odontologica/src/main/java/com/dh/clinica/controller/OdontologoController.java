@@ -25,9 +25,7 @@ public class OdontologoController {
 
     @PostMapping()
     public ResponseEntity<Odontologo> registrarOdontologo(@RequestBody Odontologo odontologo) {
-
         return ResponseEntity.ok(odontologoService.registrarOdontologo(odontologo));
-
     }
 
     @GetMapping("/{id}")

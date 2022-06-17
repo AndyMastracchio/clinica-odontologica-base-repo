@@ -1,5 +1,6 @@
 package com.dh.clinica.controller;
 
+import com.dh.clinica.dto.TurnoDto;
 import com.dh.clinica.model.Turno;
 import com.dh.clinica.repository.impl.OdontologoDaoH2;
 import com.dh.clinica.repository.impl.PacienteDaoH2;
@@ -41,11 +42,13 @@ public class TurnoController {
         return response;
     }
 
+    // Dto Refactor Ok
     @GetMapping
-    public ResponseEntity<List<Turno>> listar() {
+    public ResponseEntity<List<TurnoDto>> listar() {
         return ResponseEntity.ok(turnoService.listar());
     }
 
+    
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminar(@PathVariable Integer id) {
         ResponseEntity<String> response;
