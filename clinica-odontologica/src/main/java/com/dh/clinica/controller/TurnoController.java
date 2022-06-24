@@ -1,12 +1,11 @@
 package com.dh.clinica.controller;
 
+import com.dh.clinica.model.Paciente;
 import com.dh.clinica.model.Turno;
-import com.dh.clinica.repository.impl.OdontologoDaoH2;
-import com.dh.clinica.repository.impl.PacienteDaoH2;
-import com.dh.clinica.repository.impl.TurnoListRepository;
 import com.dh.clinica.service.OdontologoService;
 import com.dh.clinica.service.PacienteService;
 import com.dh.clinica.service.TurnoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,12 +23,19 @@ import java.util.List;
 @RequestMapping("/turnos")
 public class TurnoController {
 
+    private final TurnoService turnoService;
+    private final PacienteService pacienteService;
+    private final OdontologoService odontologoService;
 
-    private TurnoService turnoService = new TurnoService(new TurnoListRepository());
-    private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
-    private OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
+    @Autowired
+    public TurnoController(TurnoService turnoService, PacienteService pacienteService,
+                           OdontologoService odontologoService) {
+        this.turnoService = turnoService;
+        this.pacienteService = pacienteService;
+        this.odontologoService = odontologoService;
+    }
 
-    @PostMapping
+    @PostMapping("/new")
     public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) {
         ResponseEntity<Turno> response;
         if (pacienteService.buscar(turno.getPaciente().getId()) != null &&
@@ -38,10 +44,7 @@ public class TurnoController {
         } else {
             response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
-
         return response;
-
-
     }
 
     @GetMapping
@@ -50,7 +53,7 @@ public class TurnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Integer id) {
+    public ResponseEntity<String> eliminar(@PathVariable Long id) {
         ResponseEntity<String> response;
         // Esta validacion no esta en el enunciado del ejericio, pero se las dejo para que la tengan.
         if (turnoService.buscar(id) != null) {
@@ -62,11 +65,14 @@ public class TurnoController {
         return response;
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public ResponseEntity<Turno> actualizarTurno(@RequestBody Turno turno) {
         return ResponseEntity.ok(turnoService.actualizar(turno));
-
     }
 
-
+    @GetMapping("/{id}")
+    public ResponseEntity<Turno> buscar(@PathVariable Long id) {
+        Turno turno = turnoService.buscar(id);
+        return ResponseEntity.ok(turno);
+    }
 }

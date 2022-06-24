@@ -2,37 +2,41 @@ package com.dh.clinica.service;
 
 
 import com.dh.clinica.model.Paciente;
-import com.dh.clinica.repository.IDao;
+import com.dh.clinica.repository.PacienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
 
+@Service
 public class PacienteService {
 
-    private final IDao<Paciente> pacienteIDao;
+    private final PacienteRepository pacienteRepository;
 
-    public PacienteService(IDao<Paciente> pacienteIDao) {
-        this.pacienteIDao = pacienteIDao;
+    @Autowired
+    public PacienteService(PacienteRepository pacienteRepository) {
+        this.pacienteRepository = pacienteRepository;
     }
 
     public Paciente guardar(Paciente paciente) {
         paciente.setFechaIngreso(new Date());
-        return pacienteIDao.guardar(paciente);
+        return pacienteRepository.save(paciente);
     }
 
-    public Paciente buscar(Integer id) {
-        return pacienteIDao.buscar(id);
+    public Paciente buscar(Long id) {
+        return pacienteRepository.findById(id).get();
     }
 
     public List<Paciente> buscarTodos() {
-        return pacienteIDao.buscarTodos();
+        return pacienteRepository.findAll();
     }
 
-    public void eliminar(Integer id) {
-        pacienteIDao.eliminar(id);
+    public void eliminar(Long id) {
+        pacienteRepository.deleteById(id);
     }
 
-    public Paciente actualizar(Paciente p) {
-        return pacienteIDao.actualizar(p);
+    public Paciente actualizar(Paciente paciente) {
+        return pacienteRepository.save(paciente);
     }
 }

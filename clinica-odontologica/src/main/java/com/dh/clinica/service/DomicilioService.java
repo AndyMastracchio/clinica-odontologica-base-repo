@@ -2,32 +2,35 @@ package com.dh.clinica.service;
 
 
 import com.dh.clinica.model.Domicilio;
-import com.dh.clinica.repository.IDao;
+import com.dh.clinica.repository.DomicilioRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class DomicilioService {
-    private IDao<Domicilio> domicilioDao;
 
-    public DomicilioService(IDao<Domicilio> domicilioDao) {
-        this.domicilioDao = domicilioDao;
+    private final DomicilioRepository domicilioRepository;
+
+    public DomicilioService(DomicilioRepository domicilioRepository) {
+        this.domicilioRepository = domicilioRepository;
     }
 
     public Domicilio guardar(Domicilio domicilio) {
-        domicilioDao.guardar(domicilio);
+        domicilioRepository.save(domicilio);
         return domicilio;
     }
 
-    public Domicilio buscar(Integer id) {
-        return domicilioDao.buscar(id);
+    public Domicilio buscar(Long id) {
+        return domicilioRepository.findById(id).get();
     }
 
     public List<Domicilio> buscarTodos() {
-        return domicilioDao.buscarTodos();
+        return domicilioRepository.findAll();
     }
 
-    public void eliminar(Integer id) {
-        domicilioDao.eliminar(id);
+    public void eliminar(Long id) {
+        domicilioRepository.deleteById(id);
     }
 
 }

@@ -1,16 +1,36 @@
 package com.dh.clinica.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "domicilios")
 public class Domicilio {
-    private Integer id;
+
+    // TODO: configurar la secuencia correspondiente para generar el id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String calle;
+
+    @Column(name = "num")
     private String numero;
     private String localidad;
     private String provincia;
 
+    @OneToOne(mappedBy = "domicilio")
+    private Paciente paciente;
+
     public Domicilio() {
     }
 
-    public Domicilio(Integer id, String calle, String numero, String localidad, String provincia) {
+    public Domicilio(Long id, String calle, String numero, String localidad, String provincia) {
         this.id = id;
         this.calle = calle;
         this.numero = numero;
@@ -25,11 +45,11 @@ public class Domicilio {
         this.provincia = provincia;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

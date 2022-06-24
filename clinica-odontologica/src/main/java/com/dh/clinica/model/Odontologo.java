@@ -1,11 +1,32 @@
 package com.dh.clinica.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import java.util.List;
+
+@Entity
+@Table(name = "odontologos")
 public class Odontologo {
 
-    private Integer id;
+    // TODO: configurar la secuencia correspondiente para generar el id
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String nombre;
     private String apellido;
+    @Column(name = "mat")
     private Integer matricula;
+
+    @OneToMany(mappedBy = "odontologo", fetch = FetchType.LAZY)
+    private List<Turno> turnos;
 
     public Odontologo() {
     }
@@ -16,18 +37,18 @@ public class Odontologo {
         this.matricula = matricula;
     }
 
-    public Odontologo(Integer id, String nombre, String apellido, Integer matricula) {
+    public Odontologo(Long id, String nombre, String apellido, Integer matricula) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.matricula = matricula;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

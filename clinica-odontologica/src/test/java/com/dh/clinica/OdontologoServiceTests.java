@@ -1,7 +1,6 @@
 package com.dh.clinica;
 
 import com.dh.clinica.model.Odontologo;
-import com.dh.clinica.repository.impl.OdontologoDaoH2;
 import com.dh.clinica.service.OdontologoService;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -19,13 +18,11 @@ import java.util.List;
 @SpringBootTest
 public class OdontologoServiceTests {
 
-    private static OdontologoService odontologoService = new OdontologoService(new OdontologoDaoH2());
+    private static OdontologoService odontologoService;
 
     @BeforeClass
     public static void cargarDataSet() {
         odontologoService.registrarOdontologo(new Odontologo("Santiago", "Paz", 3455647));
-
-
     }
 
     @Test
@@ -37,8 +34,8 @@ public class OdontologoServiceTests {
 
     @Test
     public void eliminarPacienteTest() {
-        odontologoService.eliminar(1);
-        Assert.assertTrue(odontologoService.buscar(1) == null);
+        odontologoService.eliminar(1L);
+        Assert.assertTrue(odontologoService.buscar(1L) == null);
 
     }
 
