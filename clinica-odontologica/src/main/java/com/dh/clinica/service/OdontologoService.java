@@ -1,12 +1,15 @@
 package com.dh.clinica.service;
 
+import com.dh.clinica.exceptions.ResourceNotFoundException;
 import com.dh.clinica.model.Odontologo;
 import com.dh.clinica.repository.OdontologoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
+// TODO: este servicio debería implementar una interface que defina el contrato de los métodos que se usarán
 @Service
 public class OdontologoService {
 
@@ -21,7 +24,11 @@ public class OdontologoService {
         return odontologoRepository.save(odontologo);
     }
 
-    public void eliminar(Long id) {
+    public void eliminar(Long id) throws ResourceNotFoundException {
+        // Librería Objects permite hacer validaciones tratando nulos
+        if(Objects.isNull(buscar(id))) {
+            throw new ResourceNotFoundException("No existe odontologo con id: " + id);
+        }
         odontologoRepository.deleteById(id);
     }
 

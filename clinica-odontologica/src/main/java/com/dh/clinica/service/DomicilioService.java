@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+// TODO: este servicio debería implementar una interface que defina el contrato de los métodos que se usarán
 @Service
 public class DomicilioService {
 
