@@ -1,6 +1,7 @@
 package com.dh.clinica;
 
 
+import com.dh.clinica.exceptions.ResourceNotFoundException;
 import com.dh.clinica.model.Domicilio;
 import com.dh.clinica.model.Paciente;
 import com.dh.clinica.service.DomicilioService;
@@ -48,7 +49,7 @@ public class PacienteServiceTest {
     }
 
     @Test
-    public void eliminarPacienteTest() {
+    public void eliminarPacienteTest() throws ResourceNotFoundException {
         pacienteService.eliminar(3L);
         Assert.assertTrue(pacienteService.buscar(3L) == null);
     }

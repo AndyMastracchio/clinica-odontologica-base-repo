@@ -1,5 +1,7 @@
 package com.dh.clinica.controller;
 
+import com.dh.clinica.exceptions.BadRequestException;
+import com.dh.clinica.exceptions.ResourceNotFoundException;
 import com.dh.clinica.model.Paciente;
 import com.dh.clinica.model.Turno;
 import com.dh.clinica.service.OdontologoService;
@@ -36,7 +38,7 @@ public class TurnoController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) {
+    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException {
         ResponseEntity<Turno> response;
         if (pacienteService.buscar(turno.getPaciente().getId()) != null &&
                 odontologoService.buscar(turno.getOdontologo().getId()) != null) {
@@ -53,7 +55,7 @@ public class TurnoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Long id) {
+    public ResponseEntity<String> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         ResponseEntity<String> response;
         // Esta validacion no esta en el enunciado del ejericio, pero se las dejo para que la tengan.
         if (turnoService.buscar(id) != null) {

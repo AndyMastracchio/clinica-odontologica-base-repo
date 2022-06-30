@@ -1,5 +1,6 @@
 package com.dh.clinica.controller;
 
+import com.dh.clinica.exceptions.ResourceNotFoundException;
 import com.dh.clinica.model.Odontologo;
 import com.dh.clinica.service.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +54,7 @@ public class OdontologoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminar(@PathVariable Long id) {
+    public ResponseEntity<String> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         ResponseEntity<String> response = null;
 
         if (odontologoService.buscar(id) != null) {

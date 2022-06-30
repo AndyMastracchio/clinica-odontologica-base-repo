@@ -1,0 +1,1 @@
+INFO    2022-06-29 22:50:16,148 [http-nio-8080-exec-1] com.dh.clinica.service.OdontologoService  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
