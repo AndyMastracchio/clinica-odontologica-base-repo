@@ -1,5 +1,6 @@
 package com.dh.clinica;
 
+import com.dh.clinica.exceptions.ResourceNotFoundException;
 import com.dh.clinica.model.Odontologo;
 import com.dh.clinica.service.OdontologoService;
 import org.junit.Assert;
@@ -33,7 +34,7 @@ public class OdontologoServiceTests {
     }
 
     @Test
-    public void eliminarPacienteTest() {
+    public void eliminarPacienteTest() throws ResourceNotFoundException {
         odontologoService.eliminar(1L);
         Assert.assertTrue(odontologoService.buscar(1L) == null);
 

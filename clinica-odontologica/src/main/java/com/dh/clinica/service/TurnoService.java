@@ -8,6 +8,7 @@ import com.dh.clinica.model.Turno;
 import com.dh.clinica.repository.OdontologoRepository;
 import com.dh.clinica.repository.PacienteRepository;
 import com.dh.clinica.repository.TurnoRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,8 @@ import java.util.Optional;
 // TODO: este servicio debería implementar una interface que defina el contrato de los métodos que se usarán
 @Service
 public class TurnoService {
+
+    private static final Logger LOGGER = Logger.getLogger(TurnoService.class);
 
     private final TurnoRepository turnoRepository;
     private final OdontologoRepository odontologoRepository;
@@ -49,6 +52,7 @@ public class TurnoService {
 
 
         turno.setDate(new Date());
+        LOGGER.info("TURNO GUARDADO EXITOSAMENTE");
         return turnoRepository.save(turno);
     }
 
