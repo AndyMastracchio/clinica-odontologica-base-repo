@@ -1,7 +1,6 @@
 package com.dh.clinica.controller;
 
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Odontologo;
 import com.dh.clinica.model.Paciente;
 import com.dh.clinica.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,13 +34,13 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Paciente> buscar(@PathVariable Long id) {
+    public ResponseEntity<Paciente> buscar(@PathVariable Long id) throws ResourceNotFoundException {
         Paciente paciente = pacienteService.buscar(id);
         return ResponseEntity.ok(paciente);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente) {
+    public ResponseEntity<Paciente> actualizar(@RequestBody Paciente paciente) throws ResourceNotFoundException {
         ResponseEntity<Paciente> response = null;
 
         if (paciente.getId() != null && pacienteService.buscar(paciente.getId()) != null) {
@@ -57,12 +56,10 @@ public class PacienteController {
     public ResponseEntity<String> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         ResponseEntity<String> response = null;
 
-        if (pacienteService.buscar(id) != null) {
-            pacienteService.eliminar(id);
-            response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
-        } else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+
+        pacienteService.eliminar(id);
+        response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
+
         return response;
     }
 

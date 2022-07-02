@@ -35,13 +35,13 @@ public class OdontologoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscar(@PathVariable Long id) {
+    public ResponseEntity<Odontologo> buscar(@PathVariable Long id) throws ResourceNotFoundException {
         Odontologo odontologo = odontologoService.buscar(id);
         return ResponseEntity.ok(odontologo);
     }
 
     @PutMapping("/update")
-    public ResponseEntity<Odontologo> actualizar(@RequestBody Odontologo odontologo) {
+    public ResponseEntity<Odontologo> actualizar(@RequestBody Odontologo odontologo) throws ResourceNotFoundException {
         ResponseEntity<Odontologo> response = null;
 
         if (odontologo.getId() != null && odontologoService.buscar(odontologo.getId()) != null) {
@@ -57,12 +57,8 @@ public class OdontologoController {
     public ResponseEntity<String> eliminar(@PathVariable Long id) throws ResourceNotFoundException {
         ResponseEntity<String> response = null;
 
-        if (odontologoService.buscar(id) != null) {
-            odontologoService.eliminar(id);
-            response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
-        } else {
-            response = ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+        odontologoService.eliminar(id);
+        response = ResponseEntity.status(HttpStatus.NO_CONTENT).body("Eliminado");
 
         return response;
     }

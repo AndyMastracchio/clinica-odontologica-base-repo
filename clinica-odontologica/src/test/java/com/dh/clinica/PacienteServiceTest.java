@@ -39,7 +39,7 @@ public class PacienteServiceTest {
     }
 
     @Test
-    public void agregarYBuscarPacienteTest() {
+    public void agregarYBuscarPacienteTest() throws ResourceNotFoundException {
         Domicilio domicilio =
                 new Domicilio("Calle", "123", "Temperley", "Buenos Aires");
         Paciente paciente = pacienteService.guardar(

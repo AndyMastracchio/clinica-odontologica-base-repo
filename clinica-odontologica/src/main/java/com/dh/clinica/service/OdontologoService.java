@@ -33,13 +33,15 @@ public class OdontologoService {
 
     public void eliminar(Long id) throws ResourceNotFoundException {
         // Librería Objects permite hacer validaciones tratando nulos
-        if(Objects.isNull(buscar(id))) {
-            throw new ResourceNotFoundException("No existe odontologo con id: " + id);
+        if(Objects.nonNull(buscar(id))) {
+            odontologoRepository.deleteById(id);
         }
-        odontologoRepository.deleteById(id);
     }
 
-    public Odontologo buscar(Long id) {
+    public Odontologo buscar(Long id) throws ResourceNotFoundException {
+        if (odontologoRepository.findById(id).isEmpty()) {
+            throw new ResourceNotFoundException("No existe odontologo con id: " + id);
+        }
         return odontologoRepository.findById(id).get();
     }
 

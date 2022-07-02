@@ -38,7 +38,8 @@ public class TurnoController {
     }
 
     @PostMapping("/new")
-    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno) throws BadRequestException {
+    public ResponseEntity<Turno> registrarTurno(@RequestBody Turno turno)
+            throws BadRequestException, ResourceNotFoundException {
         ResponseEntity<Turno> response;
         if (pacienteService.buscar(turno.getPaciente().getId()) != null &&
                 odontologoService.buscar(turno.getOdontologo().getId()) != null) {
