@@ -27,20 +27,24 @@ public class PacienteService {
         return pacienteRepository.save(paciente);
     }
 
-    public Paciente buscar(Long id) {
-        return pacienteRepository.findById(id).get();
-    }
-
     public List<Paciente> buscarTodos() {
         return pacienteRepository.findAll();
     }
 
     public void eliminar(Long id) throws ResourceNotFoundException {
         // Librería Objects permite hacer validaciones tratando nulos
-        if(Objects.isNull(buscar(id))) {
+        if(Objects.nonNull(buscar(id))) {
+            pacienteRepository.deleteById(id);
             throw new ResourceNotFoundException("No existe paciente con id: " + id);
         }
-        pacienteRepository.deleteById(id);
+
+    }
+
+    public Paciente buscar(Long id) throws ResourceNotFoundException {
+        if (pacienteRepository.findById(id).isEmpty()) {
+            throw new ResourceNotFoundException("No existe paciente con id: " + id);
+        }
+        return pacienteRepository.findById(id).get();
     }
 
     public Paciente actualizar(Paciente paciente) {
