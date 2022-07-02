@@ -2,11 +2,10 @@ package com.dh.clinica.controller;
 
 import com.dh.clinica.exceptions.BadRequestException;
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Paciente;
-import com.dh.clinica.model.Turno;
-import com.dh.clinica.service.OdontologoService;
-import com.dh.clinica.service.PacienteService;
-import com.dh.clinica.service.TurnoService;
+import com.dh.clinica.entity.Turno;
+import com.dh.clinica.service.impl.OdontologoServiceImpl;
+import com.dh.clinica.service.impl.PacienteService;
+import com.dh.clinica.service.impl.TurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,11 +26,11 @@ public class TurnoController {
 
     private final TurnoService turnoService;
     private final PacienteService pacienteService;
-    private final OdontologoService odontologoService;
+    private final OdontologoServiceImpl odontologoService;
 
     @Autowired
     public TurnoController(TurnoService turnoService, PacienteService pacienteService,
-                           OdontologoService odontologoService) {
+                           OdontologoServiceImpl odontologoService) {
         this.turnoService = turnoService;
         this.pacienteService = pacienteService;
         this.odontologoService = odontologoService;

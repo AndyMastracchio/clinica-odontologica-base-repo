@@ -1,8 +1,8 @@
 package com.dh.clinica.controller;
 
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Odontologo;
-import com.dh.clinica.service.OdontologoService;
+import com.dh.clinica.entity.Odontologo;
+import com.dh.clinica.service.impl.OdontologoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +22,10 @@ import java.util.List;
 @RequestMapping("/odontologos")
 public class OdontologoController {
 
-    private final OdontologoService odontologoService;
+    private final OdontologoServiceImpl odontologoService;
 
     @Autowired
-    public OdontologoController(OdontologoService odontologoService) {
+    public OdontologoController(OdontologoServiceImpl odontologoService) {
         this.odontologoService = odontologoService;
     }
 

@@ -2,10 +2,10 @@ package com.dh.clinica;
 
 
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Domicilio;
-import com.dh.clinica.model.Paciente;
-import com.dh.clinica.service.DomicilioService;
-import com.dh.clinica.service.PacienteService;
+import com.dh.clinica.entity.Domicilio;
+import com.dh.clinica.entity.Paciente;
+import com.dh.clinica.service.impl.DomicilioService;
+import com.dh.clinica.service.impl.PacienteService;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;

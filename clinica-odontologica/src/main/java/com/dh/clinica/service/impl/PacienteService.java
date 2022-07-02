@@ -1,8 +1,8 @@
-package com.dh.clinica.service;
+package com.dh.clinica.service.impl;
 
 
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Paciente;
+import com.dh.clinica.entity.Paciente;
 import com.dh.clinica.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

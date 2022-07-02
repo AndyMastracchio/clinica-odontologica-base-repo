@@ -1,1 +1,1 @@
-INFO    2022-07-01 21:29:33,505 [http-nio-8080-exec-2] com.dh.clinica.service.OdontologoService  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-01 21:29:33,505 [http-nio-8080-exec-2] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo

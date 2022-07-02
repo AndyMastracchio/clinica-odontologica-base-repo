@@ -1,10 +1,10 @@
-package com.dh.clinica.service;
+package com.dh.clinica.service.impl;
 
 import com.dh.clinica.exceptions.BadRequestException;
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Odontologo;
-import com.dh.clinica.model.Paciente;
-import com.dh.clinica.model.Turno;
+import com.dh.clinica.entity.Odontologo;
+import com.dh.clinica.entity.Paciente;
+import com.dh.clinica.entity.Turno;
 import com.dh.clinica.repository.OdontologoRepository;
 import com.dh.clinica.repository.PacienteRepository;
 import com.dh.clinica.repository.TurnoRepository;

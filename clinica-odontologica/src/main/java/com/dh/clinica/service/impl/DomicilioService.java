@@ -1,7 +1,7 @@
-package com.dh.clinica.service;
+package com.dh.clinica.service.impl;
 
 
-import com.dh.clinica.model.Domicilio;
+import com.dh.clinica.entity.Domicilio;
 import com.dh.clinica.repository.DomicilioRepository;
 import org.springframework.stereotype.Service;
 

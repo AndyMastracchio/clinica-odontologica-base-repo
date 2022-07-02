@@ -1,8 +1,8 @@
 package com.dh.clinica;
 
 import com.dh.clinica.exceptions.ResourceNotFoundException;
-import com.dh.clinica.model.Odontologo;
-import com.dh.clinica.service.OdontologoService;
+import com.dh.clinica.entity.Odontologo;
+import com.dh.clinica.service.impl.OdontologoServiceImpl;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -17,9 +17,9 @@ import java.util.List;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(JUnit4.class)
 @SpringBootTest
-public class OdontologoServiceTests {
+public class OdontologoServiceImplTests {
 
-    private static OdontologoService odontologoService;
+    private static OdontologoServiceImpl odontologoService;
 
     @BeforeClass
     public static void cargarDataSet() {

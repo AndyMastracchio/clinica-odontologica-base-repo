@@ -1,4 +1,4 @@
-package com.dh.clinica.model;
+package com.dh.clinica.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -12,9 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "pacientes")
