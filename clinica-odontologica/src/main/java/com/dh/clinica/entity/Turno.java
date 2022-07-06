@@ -25,7 +25,7 @@ public class Turno {
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "odontologo_id")
     private Odontologo odontologo;
     private Date date;

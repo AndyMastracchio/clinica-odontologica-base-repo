@@ -1,1 +1,35 @@
 INFO    2022-07-01 21:29:33,505 [http-nio-8080-exec-2] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:19:13,997 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:31:05,116 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:31:05,139 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 11:35:18,252 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:37:23,583 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:43:16,994 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:44:21,257 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:46:39,500 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:47:02,895 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 11:47:02,929 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 13:43:27,281 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 13:45:52,099 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 13:46:53,621 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 13:47:37,476 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 13:47:57,258 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 13:48:20,103 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 13:48:20,130 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:36:31,238 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:36:31,265 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:36:50,476 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:37:05,394 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:39:12,596 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:39:12,630 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:40:48,418 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:41:12,797 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:42:22,837 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:42:59,534 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:43:23,122 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:46:26,625 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:46:26,655 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:50:38,109 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:50:38,138 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE
+INFO    2022-07-06 14:54:25,718 [main] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-06 14:54:25,752 [main] com.dh.clinica.service.impl.TurnoService  - TURNO GUARDADO EXITOSAMENTE

@@ -75,6 +75,14 @@ public class Odontologo {
         this.matricula = matricula;
     }
 
+    public List<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(List<Turno> turnos) {
+        this.turnos = turnos;
+    }
+
     @Override
     public String toString() {
         return "Odontologo{" +

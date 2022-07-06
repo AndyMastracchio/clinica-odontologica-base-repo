@@ -47,8 +47,8 @@ public class TurnoService {
             throw new BadRequestException("El paciente o el odontologo no existen");
         }
 
-        turno.setOdontologo(odontologo.get());
-        turno.setPaciente(paciente.get());
+        //turno.setOdontologo(odontologo.get());
+        //turno.setPaciente(paciente.get());
 
 
         turno.setDate(new Date());
