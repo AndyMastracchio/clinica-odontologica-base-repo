@@ -1,1 +1,9 @@
 INFO    2022-06-29 22:53:49,614 [http-nio-8080-exec-2] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-07 18:35:56,687 [http-nio-8080-exec-5] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:36:24,466 [http-nio-8080-exec-9] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:36:29,920 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:37:10,955 [http-nio-8080-exec-5] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:37:58,307 [http-nio-8080-exec-5] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:40:02,599 [http-nio-8080-exec-8] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:49:15,703 [http-nio-8080-exec-8] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 18:50:17,859 [http-nio-8080-exec-6] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
