@@ -34,6 +34,9 @@ public class AppUserService implements UserDetailsService {
         AppUser appUser = userRepository.findByUsername(username).get();
         Set<GrantedAuthority> autorizaciones = new HashSet<>();
         GrantedAuthority autorizacion = null;
+
+        // De esta manera iteraríamos y definiriamos las Authorities
+        // si el rol del AppUser fuera una colección
         /*for (AppUserRole rol : appUser.getAppUserRoles()) {
             autorizacion = new SimpleGrantedAuthority(rol.name());
             autorizaciones.add(autorizacion);
@@ -43,7 +46,7 @@ public class AppUserService implements UserDetailsService {
 
         return new User(
                 appUser.getUsername(),
-                "{noop}" + appUser.getPassword(),
+                appUser.getPassword(),
                 true, true, true,true,
                 autorizaciones);
     }

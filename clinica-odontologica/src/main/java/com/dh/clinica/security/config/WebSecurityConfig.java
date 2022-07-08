@@ -16,7 +16,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
-@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableWebSecurity
+//@EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -25,19 +26,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private JwtRequestFilter jwtRequestFilter;
 
-    /*@Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;*/
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    /*@Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }*/
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.csrf().disable()
+                // Con .antMatchers() encadenados vamos definiendo los endpoints a los cuales pueden acceder los roles
+                //.authorizeRequests()
+                //.antMatchers("/pacientes/**", "/turnos/**", "/odontologos/**").hasAnyRole("USER")
+                //.and()
                 .authorizeRequests()
-                .antMatchers("/pacientes/**", "/turnos/**", "/odontologos/**").hasAnyRole("USER")
-                .and()
-                .authorizeRequests()
-                .antMatchers("/auth").permitAll()
+                .antMatchers("/auth", "/resources/static/**").permitAll()
                 .anyRequest().authenticated()
+                // La siguiente linea es un snippet para hacer un bypass de Spring Security e ingresar a H2
                 //.and().csrf().ignoringAntMatchers("/h2-console/**")
                 //.and().headers().frameOptions().sameOrigin()
                 .and()
@@ -53,6 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService);
+                //.passwordEncoder(bCryptPasswordEncoder());
     }
 
     @Override
@@ -61,11 +69,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    /*@Bean
+    // Método opcional para la instancia del AuthenticationManagerBuilder en el configure()
+    @Bean
     public DaoAuthenticationProvider daoAuthenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setPasswordEncoder(bCryptPasswordEncoder);
         provider.setUserDetailsService(userService);
         return provider;
-    }*/
+    }
 }

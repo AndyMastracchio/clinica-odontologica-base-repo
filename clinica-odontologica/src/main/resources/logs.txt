@@ -7,3 +7,46 @@ INFO    2022-07-07 18:37:58,307 [http-nio-8080-exec-5] com.dh.clinica.controller
 INFO    2022-07-07 18:40:02,599 [http-nio-8080-exec-8] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
 INFO    2022-07-07 18:49:15,703 [http-nio-8080-exec-8] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
 INFO    2022-07-07 18:50:17,859 [http-nio-8080-exec-6] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 20:21:21,696 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:21:21,775 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:21:21,836 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:22:04,844 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:22:04,922 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:22:04,984 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:22:47,916 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:22:47,993 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:22:48,056 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:23:52,633 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:23:52,703 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:23:52,766 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:26:25,080 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:26:25,144 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:26:25,207 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:29:02,577 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:29:02,643 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+ERROR   2022-07-07 20:29:02,702 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === ENTRA POR BADCREDENTIALSEXCEPTION ///
+INFO    2022-07-07 20:32:21,553 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 20:32:21,623 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 20:32:21,745 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:00:04,160 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 21:00:04,853 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:00:04,978 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:00:32,971 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:00:32,977 [http-nio-8080-exec-3] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-07 21:01:07,906 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 21:01:07,970 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:01:08,098 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:01:15,144 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:01:15,151 [http-nio-8080-exec-3] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-07 21:01:22,096 [http-nio-8080-exec-4] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:01:22,101 [http-nio-8080-exec-4] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-07-07 21:03:33,429 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 21:03:33,503 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:03:33,636 [http-nio-8080-exec-1] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:04:00,714 [http-nio-8080-exec-5] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:04:57,230 [http-nio-8080-exec-4] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:05:42,781 [http-nio-8080-exec-5] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:06:39,875 [http-nio-8080-exec-3] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:07:08,691 [http-nio-8080-exec-7] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-07-07 21:07:08,691 [http-nio-8080-exec-7] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
+INFO    2022-07-07 21:07:08,757 [http-nio-8080-exec-7] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE
