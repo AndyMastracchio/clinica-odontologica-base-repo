@@ -1,1 +1,3 @@
 INFO    2022-07-01 21:29:33,505 [http-nio-8080-exec-2] com.dh.clinica.service.impl.OdontologoServiceImpl  - GUARDANDO UN ODONTOLOGO - EN SERVICE - METODO registrarOdontologo
+INFO    2022-12-06 19:20:02,011 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - ==== LOGGING CON authenticationManager.authenticate(new UsernamePasswordAuthenticationToken /////
+INFO    2022-12-06 19:20:02,087 [http-nio-8080-exec-2] com.dh.clinica.controller.JWTController  - === DENTRO DE loadUserByUsername METHOD en APPUSERSERVICE

@@ -50,8 +50,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-                //.and()
-                //.exceptionHandling().accessDeniedPage("/403");
+                // Las siguientes líneas son opcionales y sirve para customizar las respuestas 403 Forbidden
+                // ya sea con una pagina o con una clase handler que implemente la interface AccessDeniedHandler
+                //.and().exceptionHandling().accessDeniedPage("/403");
+                //.and().exceptionHandling().accessDeniedHandler(accessDeniedHandler());
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }
 
